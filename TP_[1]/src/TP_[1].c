@@ -85,12 +85,12 @@ case 3:
 	else{printf("No es posible dividir por 0.");}
 
 	resultadoMultiplicacion=Multiplicar(unNumero, otroNumero);
-	if(unNumeroEntero-unNumero==0||otroNumeroEntero<=0){
+	if(unNumeroEntero-unNumero==0||otroNumeroEntero<=0||otroNumeroEntero>12){
 	resultadoFactorialUno=Factorial(unNumeroEntero);
 
 	}
 	else{printf("Error. No es posible hacer el factorial del 1er operando.");}
-	if(otroNumeroEntero-otroNumero==0||otroNumeroEntero<=0){
+	if(otroNumeroEntero-otroNumero==0||otroNumeroEntero<=0||otroNumeroEntero>12){
 	resultadoFactorialDos=Factorial(otroNumeroEntero);
 	}
 	else{printf("Error. No es posible hacer el factorial del 2do operando.");}
@@ -118,12 +118,4 @@ case 4:
 printf("\n Off");
 return 0;
 }
-/*
-Saber que numero estoy ingresando(agregar mensaje)
-Mostrar que se calcularon las operaciones
-Agregar  “No es posible dividir por cero”.
 
-Cuando se muestran los resultados, dejar que el usuario lea
-Documentar las funciones
-Agregar "Se requiere un segundo operando para hacer los calculos"
- */
