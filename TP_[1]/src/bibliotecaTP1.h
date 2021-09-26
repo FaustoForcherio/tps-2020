@@ -11,6 +11,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+
+
 float PedirFloat(char mensaje[]);
 float Sumar(float, float);
 float Restar(float, float);

@@ -75,6 +75,7 @@ case 2:
  flagY=1;
 	break;
 case 3:
+	if(flagX==0||flagY==0){
 	printf("Calculos hechos");
 	resultadoSuma=Sumar(unNumero, otroNumero);
 	resultadoResta=Restar(unNumero, otroNumero);
@@ -84,15 +85,17 @@ case 3:
 	else{printf("No es posible dividir por 0.");}
 
 	resultadoMultiplicacion=Multiplicar(unNumero, otroNumero);
-	if(unNumeroEntero-unNumero==0){
+	if(unNumeroEntero-unNumero==0||otroNumeroEntero<=0){
 	resultadoFactorialUno=Factorial(unNumeroEntero);
 
 	}
-	else{printf("El 1er operando no es un numero entero, no se puede hacer el factorial.");}
-	if(otroNumeroEntero-otroNumero==0){
+	else{printf("Error. No es posible hacer el factorial del 1er operando.");}
+	if(otroNumeroEntero-otroNumero==0||otroNumeroEntero<=0){
 	resultadoFactorialDos=Factorial(otroNumeroEntero);
 	}
-	else{printf("El 2do operando no es un numero entero, no se puede hacer el factorial.");}
+	else{printf("Error. No es posible hacer el factorial del 2do operando.");}
+	}
+	else{printf("Se requiere ingresar ambos numeros para realizar los calculos.")}
 	break;
 
 case 4:
@@ -121,6 +124,6 @@ Mostrar que se calcularon las operaciones
 Agregar  “No es posible dividir por cero”.
 
 Cuando se muestran los resultados, dejar que el usuario lea
-Documentar las funciones.
+Documentar las funciones
 Agregar "Se requiere un segundo operando para hacer los calculos"
  */
