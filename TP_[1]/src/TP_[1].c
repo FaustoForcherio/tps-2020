@@ -75,27 +75,27 @@ case 2:
  flagY=1;
 	break;
 case 3:
-	if(flagX==0||flagY==0){
-	printf("Calculos hechos");
+	if(flagX==1&&flagY==1){
+	printf("\nCalculos hechos\n");
 	resultadoSuma=Sumar(unNumero, otroNumero);
 	resultadoResta=Restar(unNumero, otroNumero);
 	if(otroNumero!=0){
 	resultadoDivision=Dividir(unNumero, otroNumero);
 	}
-	else{printf("No es posible dividir por 0.");}
+	else{printf("No es posible dividir por 0.\n");}
 
 	resultadoMultiplicacion=Multiplicar(unNumero, otroNumero);
-	if(unNumeroEntero-unNumero==0||otroNumeroEntero<=0||otroNumeroEntero>12){
+	if(unNumeroEntero-unNumero==0&&otroNumeroEntero>0&&otroNumeroEntero<=12){
 	resultadoFactorialUno=Factorial(unNumeroEntero);
 
 	}
-	else{printf("Error. No es posible hacer el factorial del 1er operando.");}
-	if(otroNumeroEntero-otroNumero==0||otroNumeroEntero<=0||otroNumeroEntero>12){
+	else{printf("Error. No es posible hacer el factorial del 1er operando.\n");}
+	if(otroNumeroEntero-otroNumero==0&&otroNumeroEntero>0&&otroNumeroEntero<=12){
 	resultadoFactorialDos=Factorial(otroNumeroEntero);
 	}
-	else{printf("Error. No es posible hacer el factorial del 2do operando.");}
+	else{printf("Error. No es posible hacer el factorial del 2do operando.\n");}
 	}
-	else{printf("Se requiere ingresar ambos numeros para realizar los calculos.")}
+	else{printf("Se requiere ingresar ambos numeros para realizar los calculos.\n");}
 	break;
 
 case 4:
@@ -105,10 +105,10 @@ case 4:
 	printf("El resultado de la división es: %f \n", resultadoDivision);
 	}
 	printf("El resultado de la multiplicación es: %f \n", resultadoMultiplicacion);
-	if(unNumeroEntero-unNumero==0){
+	if(unNumeroEntero-unNumero==0&&otroNumeroEntero>0&&otroNumeroEntero<=12){
 	printf("El resultado del primer factorial es: %d \n", resultadoFactorialUno);
 	}
-	if(otroNumeroEntero-otroNumero==0){
+	if(otroNumeroEntero-otroNumero==0&&otroNumeroEntero>0&&otroNumeroEntero<=12){
 	printf("El resultado del segundo factorial es: %d \n", resultadoFactorialDos);
 	}
 	break;
