@@ -23,11 +23,13 @@ float	resultadoSuma=0;
 float	resultadoResta=0;
 float	resultadoDivision=0;
 float	resultadoMultiplicacion=0;
-int		resultadoFactorialUno=0;
-int		resultadoFactorialDos=0;
+int	resultadoFactorialUno=0;
+int	resultadoFactorialDos=0;
 int flagX=0;
 int flagY=0;
-
+int flagCalculos=0;
+int flagFactorialUno=0;
+int flagFactorialDos=0;
 do{
 
 printf("\n\t CALCULADORA \n");
@@ -85,32 +87,38 @@ case 3:
 	else{printf("No es posible dividir por 0.\n");}
 
 	resultadoMultiplicacion=Multiplicar(unNumero, otroNumero);
-	if(unNumeroEntero-unNumero==0&&otroNumeroEntero>0&&otroNumeroEntero<=12){
+	if(ValidarFactorial(unNumeroEntero)){
 	resultadoFactorialUno=Factorial(unNumeroEntero);
-
+	flagFactorialUno=1;
 	}
 	else{printf("Error. No es posible hacer el factorial del 1er operando.\n");}
-	if(otroNumeroEntero-otroNumero==0&&otroNumeroEntero>0&&otroNumeroEntero<=12){
+	if(ValidarFactorial(otroNumeroEntero)){
 	resultadoFactorialDos=Factorial(otroNumeroEntero);
+	flagFactorialDos=1;
 	}
 	else{printf("Error. No es posible hacer el factorial del 2do operando.\n");}
+	flagCalculos=1;
 	}
 	else{printf("Se requiere ingresar ambos numeros para realizar los calculos.\n");}
+
 	break;
 
 case 4:
+	if(flagCalculos==1&&flagX==1&&flagY==1){
 	printf("\nEl resultado de la suma es: %f \n", resultadoSuma);
 	printf("El resultado de la resta es: %f \n", resultadoResta);
 	if(otroNumero!=0){
 	printf("El resultado de la división es: %f \n", resultadoDivision);
 	}
 	printf("El resultado de la multiplicación es: %f \n", resultadoMultiplicacion);
-	if(unNumeroEntero-unNumero==0&&otroNumeroEntero>0&&otroNumeroEntero<=12){
+	if(flagFactorialUno==1){
 	printf("El resultado del primer factorial es: %d \n", resultadoFactorialUno);
 	}
-	if(otroNumeroEntero-otroNumero==0&&otroNumeroEntero>0&&otroNumeroEntero<=12){
+	if(flagFactorialDos==1){
 	printf("El resultado del segundo factorial es: %d \n", resultadoFactorialDos);
 	}
+	}
+	else{printf("Se requiere ingresar ambos operandos y calcular, para poder informar los resultados");}
 	break;
 }
 

@@ -43,10 +43,15 @@ float Dividir(float, float);
 /// @return retorna el resultado de la multiplicacion de ambos numeros flotantes
 float Multiplicar(float, float);
 /// @fn float Factorial(int)
-/// @brief Se ingresa un numero entero para hacer el factorial del msimo
+/// @brief Se ingresa un numero entero para hacer el factorial del mismo
 /// @param Numero del que se hace el factorial
 /// @return Retorna un numero entero que es el resultado del factorial
-float Factorial(int);
+unsigned long Factorial(int);
+/// @fn int ValidarFactorial(float numero)
+/// @brief Se valida el numero ingresado
+/// @param Numero que se valida
+/// @return Retorna un numero entero para confirmar la validacion
+int ValidarFactorial(float);
 
 
 #endif /* BIBLIOTECATP1_H_ */

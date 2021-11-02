@@ -37,18 +37,27 @@ float Multiplicar(float unNumero, float otroNumero){
 	return resultado;
 }
 
-
-
-int Factorial(int numero){
-	int resultado;
-
-		if(numero==1){
-			return 1;
+int ValidarFactorial(float numero){
+	int rtn=0;
+	int numeroEntero;
+	if(numero>0&&numero<=12){
+		numeroEntero=numero;
+		if(numero-numeroEntero==0){
+		rtn=1;
 		}
-
-		resultado=numero*Factorial(numero-1);
-
-
-		return resultado;
+	}
+	return rtn;
 }
+
+unsigned long Factorial(int numero){
+	int i;
+	int fact=1;
+	int resultado;
+	   for(i=1;i<=numero;i++){
+	     fact=fact*i;
+	 }
+	 resultado=fact;
+	return resultado;
+	}
+
 
