@@ -91,12 +91,14 @@ case 3:
 	resultadoFactorialUno=Factorial(unNumeroEntero);
 	flagFactorialUno=1;
 	}
-	else{printf("Error. No es posible hacer el factorial del 1er operando.\n");}
+	else{printf("Error. No es posible hacer el factorial del 1er operando.\n");
+	flagFactorialUno=0;}
 	if(ValidarFactorial(otroNumeroEntero)){
 	resultadoFactorialDos=Factorial(otroNumeroEntero);
 	flagFactorialDos=1;
 	}
-	else{printf("Error. No es posible hacer el factorial del 2do operando.\n");}
+	else{printf("Error. No es posible hacer el factorial del 2do operando.\n");
+	flagFactorialDos=0;}
 	flagCalculos=1;
 	}
 	else{printf("Se requiere ingresar ambos numeros para realizar los calculos.\n");}
@@ -110,15 +112,19 @@ case 4:
 	if(otroNumero!=0){
 	printf("El resultado de la división es: %f \n", resultadoDivision);
 	}
+	else(printf("No se puede dividir por 0.\n"));
 	printf("El resultado de la multiplicación es: %f \n", resultadoMultiplicacion);
 	if(flagFactorialUno==1){
 	printf("El resultado del primer factorial es: %d \n", resultadoFactorialUno);
 	}
+	else(printf("No hay resultado del factorial del primer operando.\n"));
 	if(flagFactorialDos==1){
 	printf("El resultado del segundo factorial es: %d \n", resultadoFactorialDos);
 	}
+	else(printf("No hay resultado del factorial del segundo operando.\n"));
+	flagCalculos=0;
 	}
-	else{printf("Se requiere ingresar ambos operandos y calcular, para poder informar los resultados");}
+	else{printf("Se requiere calcular, para poder informar los resultados. \n");}
 	break;
 }
 

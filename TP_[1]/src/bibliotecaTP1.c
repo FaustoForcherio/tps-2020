@@ -40,7 +40,7 @@ float Multiplicar(float unNumero, float otroNumero){
 int ValidarFactorial(float numero){
 	int rtn=0;
 	int numeroEntero;
-	if(numero>0&&numero<=12){
+	if(numero>=0&&numero<=12){
 		numeroEntero=numero;
 		if(numero-numeroEntero==0){
 		rtn=1;
